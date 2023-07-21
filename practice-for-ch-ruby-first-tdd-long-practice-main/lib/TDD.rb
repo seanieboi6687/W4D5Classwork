@@ -1,9 +1,11 @@
-def my_uniq(arr)
-    unique_ele = {}
-    arr.each do |ele|
-        unique_ele[ele] = true 
-    end
+class Array
+    def my_uniq
+        unique_ele = {}
+        self.each do |ele|
+            unique_ele[ele] = true 
+        end
 
-    unique_ele.keys
+        unique_ele.keys
+    end
 end
 
