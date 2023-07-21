@@ -1,4 +1,4 @@
-require "/Users/sean/Desktop/App Academy/W4/D5/Classwork/practice-for-ch-ruby-first-tdd-long-practice-main/lib/TDD.rb"
+require "TDD.rb"
 
 describe "my_uniq" do
     it "should return a new array with unique elements" do
@@ -13,4 +13,16 @@ describe "my_uniq" do
         expect(arr_1.my_uniq).to eq([1, 2, 3])
     end
     
+end
+
+describe "two_sum" do 
+    it "should return pairs of indices that are sorted with smaller index before the biggest index" do 
+        arr_1 = [-1, 0, 2, -2, 1] 
+        expect(arr_1.two_sum.all? { |subarr| subarr[0] < subarr[1]}).to eq(true)
+    end
+
+    it "should find all pairs of positions where the elements at those positions sum to zero." do
+        arr_1 = [-1, 0, 2, -2, 1] 
+        expect(arr_1.two_sum).to eq([[0, 4], [2, 3]])
+    end
 end
